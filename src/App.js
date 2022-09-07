@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import {Switch, Route} from "wouter";
 import './App.css';
+import { Home } from "./Pages/Home/Home";
+import { NotFound } from "./Pages/NotFound/NotFound";
+import BuscarPsicologo from "./Pages/BuscarPsicologo/BuscarPsicologo";
+import SoyPsicologo from "./Pages/SoyPsicologo/SoyPsicologo";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="BuscarPsicologo" component={BuscarPsicologo}></Route>
+        <Route path="SoyPsicologo" component={SoyPsicologo}></Route>
+        <Route component={NotFound}></Route>
+      </Switch>
     </div>
   );
 }
