@@ -3,6 +3,7 @@ import './Home.css';
 import { Link } from "wouter";
 import { Header } from "../../Components/Header/Header";
 import AOS from 'aos';
+import saludMentalImg from "../../img/SaludMental_1.svg"
 import searchIconW from "../../img/icons-search-30-w.png";
 import questionIconW from "../../img/icons-question-50-w.png";
 import psiIconW from "../../img/icons-psi-32-w.png";
@@ -10,6 +11,7 @@ import questionIcon from "../../img/icons-ayuda-100.png";
 import calendarIcon from "../../img/icons-calendar-50.png";
 import arrowIcon from "../../img/icons-accede-redondeado-derecho-50.png";
 import searchIconB from "../../img/icons8-búsqueda-50.png"
+import Footer from "../../Components/Footer/Footer";
 
 
 export const Home = () =>{
@@ -37,6 +39,7 @@ export const Home = () =>{
             <Header />
             <main>
                 <div className="main__first-container">
+                    <img src={saludMentalImg} />
                     <h1 className="main__title" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
                         Terapia Online
                     </h1>
@@ -53,7 +56,13 @@ export const Home = () =>{
                     <Link to="BuscarPsicologo" className="second-container__button button__buscarPsicologo" ><img src={searchIconW} className="button__search-icon-white" alt="Img buscar"></img>Buscar Psicólogo</Link>
                     <Link to="SoyPsicologo" className="second-container__button button__soyPsicologo"><img src={psiIconW} className="button__search-icon-white" alt="img psicologo"></img>Soy Psicólogo</Link>
                 </div>
-                <section className="main__basic-description"></section>
+                <section className="main__basic-description">
+                    <h3>Tu salud mental va primero.</h3>
+                    <p> En Mentally Safe nos dedicamos a entregarte un servicio gratuito, rápido y seguro donde puedas
+                        encontrar algún psicólogo que se adecúe a tus necesidades. 
+                    </p>
+
+                </section>
                 <section className="main__como-funciona">
                     <img src={questionIcon} className="question-icon-b" alt="Img buscar"></img>
                     <h3>Como funciona</h3>
@@ -73,6 +82,7 @@ export const Home = () =>{
                     </div>
                 </section>
             </main>
+            <Footer />
         </div>
     )
 }
