@@ -81,6 +81,13 @@ export const Home = () =>{
                         </div>
                     </div>
                 </section>
+                <hr />
+                <section className="main__buscar-psi-container">
+                    <form>
+                        <input type="text"></input>
+                        <button>buscar</button>
+                    </form>
+                </section>
             </main>
             <Footer />
         </div>

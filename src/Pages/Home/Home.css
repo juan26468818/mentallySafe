@@ -33,8 +33,9 @@
 .main__second-container{
     background-image: url("../../img/Terapia_4.webp");
     background-repeat: no-repeat;
-    background-size: 40rem;
-    height: 30rem;
+    background-size: 100%;
+    margin-bottom: 2rem;
+    height: 30%;
     object-fit:none;
     display: flex;
     flex-direction: column;
